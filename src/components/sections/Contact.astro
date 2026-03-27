@@ -1,0 +1,81 @@
+---
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+---
+
+<section class="bg-[#102456] text-white py-24 md:py-32">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="grid gap-16 lg:grid-cols-2 lg:gap-24 items-start">
+      
+      {/* Text Context */}
+      <div class="space-y-6">
+        <h2 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          Pronto para conversar?
+        </h2>
+        <p class="text-lg text-slate-300 leading-relaxed md:text-xl max-w-md">
+          Conte-nos sobre o seu desafio. Nossa equipe técnica 
+          entrará em contato para mapear a melhor solução para sua operação.
+        </p>
+      </div>
+
+      {/* Form */}
+      <div class="bg-white/5 p-8 md:p-10 rounded-2xl border border-white/10 shadow-xl backdrop-blur-sm">
+        <form class="space-y-6">
+          <div class="space-y-4">
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="space-y-2">
+                <label for="name" class="text-sm font-medium text-slate-200">Nome</label>
+                <Input 
+                  type="text" 
+                  id="name" 
+                  placeholder="Seu nome" 
+                  className="bg-transparent border-t-0 border-x-0 border-b border-white/20 rounded-none px-0 focus-visible:ring-0 focus-visible:border-white shadow-none placeholder:text-slate-400 text-white"
+                  client:load 
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="company" class="text-sm font-medium text-slate-200">Empresa</label>
+                <Input 
+                  type="text" 
+                  id="company" 
+                  placeholder="Nome da empresa" 
+                  className="bg-transparent border-t-0 border-x-0 border-b border-white/20 rounded-none px-0 focus-visible:ring-0 focus-visible:border-white shadow-none placeholder:text-slate-400 text-white"
+                  client:load 
+                />
+              </div>
+            </div>
+            
+            <div class="space-y-2">
+              <label for="email" class="text-sm font-medium text-slate-200">E-mail corporativo</label>
+              <Input 
+                type="email" 
+                id="email" 
+                placeholder="seu@email.com" 
+                className="bg-transparent border-t-0 border-x-0 border-b border-white/20 rounded-none px-0 focus-visible:ring-0 focus-visible:border-white shadow-none placeholder:text-slate-400 text-white"
+                client:load 
+              />
+            </div>
+            
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-medium text-slate-200">Mensagem</label>
+              <textarea 
+                id="message" 
+                rows="4" 
+                placeholder="Como podemos ajudar?" 
+                class="flex w-full bg-transparent border-t-0 border-x-0 border-b border-white/20 rounded-none px-0 py-2 text-base focus-visible:outline-none focus:border-white placeholder:text-slate-400 text-white resize-none"
+              ></textarea>
+            </div>
+          </div>
+          
+          <Button type="submit" className="w-full bg-white text-primary hover:bg-slate-100 font-bold h-12" client:load>
+            Enviar mensagem
+          </Button>
+          <p class="text-xs text-slate-400 text-center">
+            Suas informações estão seguras. Não enviamos spam.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

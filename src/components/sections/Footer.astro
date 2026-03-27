@@ -1,0 +1,71 @@
+---
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+---
+
+<footer class="bg-slate-50 pt-16 pb-8 border-t border-slate-200 text-sm">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="grid gap-12 lg:grid-cols-5 md:grid-cols-2">
+      
+      {/* Branding Column */}
+      <div class="lg:col-span-2 space-y-6">
+        <a href="/" class="inline-block text-2xl font-black tracking-tight text-slate-900">
+          Globals.
+        </a>
+        <p class="text-slate-500 max-w-xs leading-relaxed">
+          Nós somos a infraestrutura tecnológica que impulsiona empresas modernas. Precisão, 
+          estabilidade e escala para líderes globais.
+        </p>
+      </div>
+
+      {/* Navigation */}
+      <div class="space-y-4">
+        <h4 class="font-semibold text-slate-900">Navegação</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-slate-500 hover:text-primary transition-colors">Nós Somos</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-primary transition-colors">Serviços</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-primary transition-colors">Tecnologia</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-primary transition-colors">Contato</a></li>
+        </ul>
+      </div>
+
+      {/* Services */}
+      <div class="space-y-4">
+        <h4 class="font-semibold text-slate-900">Serviços</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-slate-500 hover:text-primary transition-colors">Sistemas Financeiros</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-primary transition-colors">Indústria & Manufatura</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-primary transition-colors">Saúde & Medicina</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-primary transition-colors">Cloud & Infra</a></li>
+        </ul>
+      </div>
+
+      {/* Newsletter */}
+      <div class="space-y-4 lg:col-span-1 md:col-span-2">
+        <h4 class="font-semibold text-slate-900">Newsletter</h4>
+        <p class="text-slate-500 text-xs text-balance">Receba insights sobre arquitetura e engenharia de software.</p>
+        <form class="flex pt-2 max-w-xs">
+          <Input 
+            type="email" 
+            placeholder="Seu e-mail" 
+            className="rounded-r-none focus-visible:ring-primary shadow-sm h-10 border-r-0"
+            client:load
+          />
+          <Button type="submit" className="rounded-l-none h-10 px-3 shrink-0" client:load>
+            <ArrowRight class="w-4 h-4" />
+          </Button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="mt-20 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+      <p>© {new Date().getFullYear()} Globals. Todos os direitos reservados.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-primary transition-colors">Política de Privacidade</a>
+        <a href="#" class="hover:text-primary transition-colors">Termos de Serviço</a>
+      </div>
+    </div>
+  </div>
+</footer>
