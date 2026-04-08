@@ -1,87 +1,110 @@
 ---
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Database, Activity, ShieldCheck, Cpu } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+const platforms = [
+  {
+    title: "Totals One",
+    subtitle: "Núcleo de Borda BaaS",
+    description: "Plataforma de missão crítica para estruturas BaaS. Conecta liquidantes, cores bancários, instituidoras, iniciadores de pagamento e provedores. App, Internet Banking, Backoffice, APIs completas e telemetria em tempo real.",
+    className: "lg:col-span-1 lg:row-span-2 min-h-[500px]",
+    image: "/images/placeholders/server-rack.jpg"
+  },
+  {
+    title: "Totals Early",
+    subtitle: "Governança de Recebíveis",
+    description: "Visão consolidada e antecipação transparente com modelagem preditiva e prevenção rigorosa de fraudes operacionais.",
+    className: "lg:col-span-1 lg:row-span-2 min-h-[500px]",
+    image: "/images/placeholders/cube.jpg"
+  },
+  {
+    title: "Totals Cognit",
+    subtitle: "IA Conversacional Operacional",
+    description: "Automação com inteligência artificial para atendimento em esteiras de operação complexa e missão crítica.",
+    className: "lg:col-span-1 lg:row-span-1 min-h-[300px]",
+    image: "/images/placeholders/neural.jpg"
+  },
+  {
+    title: "Totals Lince",
+    subtitle: "Antecipação Performada",
+    description: "Maior fluxo de caixa corporativo projetado para reduzir a volatilidade dos fundos gerenciados.",
+    className: "lg:col-span-1 lg:row-span-1 min-h-[300px]",
+    image: "/images/placeholders/lens.jpg"
+  },
+  {
+    title: "Monitoramento 24x7",
+    subtitle: "Operação Contínua 24x7",
+    description: "Supervisão ininterrupta. Redundância e fail-overs automatizados para sua plataforma não ter downtime.",
+    className: "lg:col-span-2 lg:row-span-1 min-h-[300px]",
+    image: "/images/placeholders/globe.jpg"
+  }
+];
 ---
 
-<section class="bg-slate-50 px-6 py-24 md:py-32">
-  <div class="mx-auto max-w-6xl space-y-16">
-    <div class="text-center max-w-2xl mx-auto space-y-4">
-      <h2 class="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-        Tecnologia que <span class="text-primary">governa</span> operações
-      </h2>
-      <p class="text-lg text-slate-600">
-        Nossa arquitetura de software é pensada para robustez, 
-        confiabilidade e processamento de alto volume.
-      </p>
+<section id="plataformas" class="bg-slate-50 px-6 py-24 md:py-32">
+  <div class="mx-auto max-w-[1400px] space-y-16">
+    
+    <!-- 2-Column Header -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="col-span-1 lg:col-span-7 space-y-4">
+        <p class="text-sm font-semibold tracking-[0.2em] text-slate-400 uppercase">
+          // NOSSAS PLATAFORMAS
+        </p>
+        <h2 class="text-3xl md:text-6xl lg:text-[72px] font-bold tracking-tighter leading-[1.05] text-slate-900">
+          Tecnologia que
+          <br class="hidden md:block"/>
+          <span class="text-slate-400">governa operações.</span>
+        </h2>
+      </div>
+      <div class="col-span-1 lg:col-span-5 lg:pt-12">
+        <p class="text-lg md:text-md text-slate-600 leading-relaxed font-light max-w-lg">
+          Plataformas especializadas para operações de missão crítica. 
+          Cada produto nasce da nossa experiência em ambientes regulados e de alta exigência.
+        </p>
+      </div>
     </div>
 
-    {/* Mixed Grid Layout */}
-    <div class="grid gap-6 md:grid-cols-3">
-      
-      {/* Large Featured Card */}
-      <Card className="md:col-span-2 group overflow-hidden border-0 bg-white shadow-sm hover:shadow-md transition-all duration-300" client:load>
-        <CardContent className="p-0 h-full flex flex-col md:flex-row">
-          <div class="p-8 md:p-12 flex-1 flex flex-col justify-center space-y-4">
-            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-2">
-              <Server class="w-6 h-6" />
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+      {platforms.map((platform, index) => (
+        <a 
+          href="#contato" 
+          class={`service-card block relative overflow-hidden bg-[#0f172a] group ${platform.className}`}
+        >
+          <!-- Background Placeholder (Darkened state) -->
+          <div class="absolute inset-0 bg-[#0f172a]/90 transition-all duration-700 ease-in-out group-hover:bg-[#0f172a]/70 z-10"></div>
+          
+          <!-- Image (scales on hover) -->
+          <div class="absolute inset-0 bg-slate-800 transition-transform duration-[1.2s] ease-out group-hover:scale-105 z-0">
+             <!-- Abstract grid background as fallback since we don't have images -->
+             <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at center, white 1px, transparent 1px); background-size: 20px 20px;"></div>
+          </div>
+
+          <!-- Arrow Icon (Top Right) -->
+          <div class="absolute top-6 right-6 z-20 text-white/50 transition-all duration-500 transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
+            <ArrowRight class="w-5 h-5 -rotate-45" />
+          </div>
+
+          <!-- Content (Bottom anchord) -->
+          <div class="absolute bottom-0 left-0 right-0 p-8 z-20 flex flex-col justify-end">
+            <h3 class="text-2xl font-bold text-white tracking-tight mb-1">{platform.title}</h3>
+            <p class="text-white/80 font-medium text-sm transition-transform duration-500 transform translate-y-0 relative z-30">{platform.subtitle}</p>
+            
+            <!-- Hidden Description Revealed on Hover -->
+            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+              <div class="overflow-hidden">
+                <p class="text-white/70 text-sm mt-4 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  {platform.description}
+                </p>
+              </div>
             </div>
-            <CardTitle className="text-2xl font-bold text-slate-900">Cloud & Infraestrutura</CardTitle>
-            <p class="text-slate-600 leading-relaxed">
-              Provisionamos e gerenciamos servidores dedicados e ambientes serverless, 
-              garantindo que sua aplicação tenha os recursos necessários em tempo real.
-            </p>
           </div>
-          <div class="md:w-1/3 bg-slate-100 relative min-h-48 overflow-hidden">
-             <!-- Abstract visual decoration -->
-             <div class="absolute inset-0 flex items-center justify-center opacity-10">
-                <Cpu class="w-48 h-48 text-primary" />
-             </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Standard Card 1 */}
-      <Card className="border-0 bg-white shadow-sm hover:shadow-md transition-all duration-300" client:load>
-        <CardContent className="p-8 space-y-4 h-full flex flex-col justify-center">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-2">
-            <Database class="w-6 h-6" />
-          </div>
-          <CardTitle className="text-xl font-bold text-slate-900">Data & AI</CardTitle>
-          <p class="text-slate-600">
-            Pipelines de dados eficientes para treinamento e inferência de modelos analíticos.
-          </p>
-        </CardContent>
-      </Card>
-
-      {/* Standard Card 2 */}
-      <Card className="border-0 bg-white shadow-sm hover:shadow-md transition-all duration-300" client:load>
-        <CardContent className="p-8 space-y-4 h-full flex flex-col justify-center">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-2">
-            <Activity class="w-6 h-6" />
-          </div>
-          <CardTitle className="text-xl font-bold text-slate-900">Monitoring</CardTitle>
-          <p class="text-slate-600">
-            Observabilidade total com telemetria avançada e dashboards de saúde em tempo real.
-          </p>
-        </CardContent>
-      </Card>
-
-      {/* Standard Card 3 */}
-      <Card className="md:col-span-2 border-0 bg-white shadow-sm hover:shadow-md transition-all duration-300" client:load>
-        <CardContent className="p-8 flex flex-col sm:flex-row items-center gap-6 h-full">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
-            <ShieldCheck class="w-6 h-6" />
-          </div>
-          <div>
-            <CardTitle className="text-xl font-bold text-slate-900 mb-2">Segurança Zero-Trust</CardTitle>
-            <p class="text-slate-600 md:pr-12">
-              Implementamos camadas múltiplas de defesa e auditorias contínuas para proteger 
-              senhas, acessos e transações sensíveis.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-
+        </a>
+      ))}
     </div>
+
   </div>
 </section>
+
+<style>
+  /* Optional: Smooth fade in for scroll if needed, reusing the intersection observer approach from global.css or Hero */
+</style>

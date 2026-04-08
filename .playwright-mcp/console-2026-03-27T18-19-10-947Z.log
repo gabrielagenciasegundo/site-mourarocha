@@ -1,0 +1,136 @@
+[    1362ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  <Input type="email" placeholder="Seu e-mail" className="rounded-r-...">
+    <Input2 type="email" data-slot="input" className="w-full min..." placeholder="Seu e-mail">
+      <FieldControl2 ref={null} type="email" data-slot="input" className="w-full min..." placeholder="Seu e-mail">
+        <input
+          id="base-ui-_r14R_0_"
+          disabled={false}
+          name={undefined}
+          ref={function}
+          aria-labelledby={undefined}
+          autoFocus={false}
+          defaultValue={undefined}
+          onChange={function onChange}
+          onFocus={function onFocus}
+          onBlur={function onBlur}
+          onKeyDown={function onKeyDown}
+          type="email"
+          data-slot="input"
+          placeholder="Seu e-mail"
+          className="w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-col..."
+-         style={{caret-color:"transparent"}}
+        >
+ @ http://localhost:4322/node_modules/.vite/deps/chunk-UTQ67KV7.js?v=6e94f51a:4072
+[    1371ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  <Input type="text" id="company" placeholder="Nome da em..." className="bg-transpa...">
+    <Input2 type="text" data-slot="input" className="h-8 w-full..." id="company" placeholder="Nome da em...">
+      <FieldControl2 ref={null} type="text" data-slot="input" className="h-8 w-full..." id="company" ...>
+        <input
+          id="company"
+          disabled={false}
+          name={undefined}
+          ref={function}
+          aria-labelledby={undefined}
+          autoFocus={false}
+          defaultValue={undefined}
+          onChange={function onChange}
+          onFocus={function onFocus}
+          onBlur={function onBlur}
+          onKeyDown={function onKeyDown}
+          type="text"
+          data-slot="input"
+          placeholder="Nome da empresa"
+          className="h-8 w-full min-w-0 border py-1 text-base transition-colors outline-none file:inline-flex file:h-6..."
+-         style={{caret-color:"transparent"}}
+        >
+ @ http://localhost:4322/node_modules/.vite/deps/chunk-UTQ67KV7.js?v=6e94f51a:4072
+[    1373ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  <Input type="email" id="email" placeholder="seu@email.com" className="bg-transpa...">
+    <Input2 type="email" data-slot="input" className="h-8 w-full..." id="email" placeholder="seu@email.com">
+      <FieldControl2 ref={null} type="email" data-slot="input" className="h-8 w-full..." id="email" ...>
+        <input
+          id="email"
+          disabled={false}
+          name={undefined}
+          ref={function}
+          aria-labelledby={undefined}
+          autoFocus={false}
+          defaultValue={undefined}
+          onChange={function onChange}
+          onFocus={function onFocus}
+          onBlur={function onBlur}
+          onKeyDown={function onKeyDown}
+          type="email"
+          data-slot="input"
+          placeholder="seu@email.com"
+          className="h-8 w-full min-w-0 border py-1 text-base transition-colors outline-none file:inline-flex file:h-6..."
+-         style={{caret-color:"transparent"}}
+        >
+ @ http://localhost:4322/node_modules/.vite/deps/chunk-UTQ67KV7.js?v=6e94f51a:4072
+[    1437ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  <Input type="text" id="name" placeholder="Seu nome" className="bg-transpa...">
+    <Input2 type="text" data-slot="input" className="h-8 w-full..." id="name" placeholder="Seu nome">
+      <FieldControl2 ref={null} type="text" data-slot="input" className="h-8 w-full..." id="name" placeholder="Seu nome">
+        <input
+          id="name"
+          disabled={false}
+          name={undefined}
+          ref={function}
+          aria-labelledby={undefined}
+          autoFocus={false}
+          defaultValue={undefined}
+          onChange={function onChange}
+          onFocus={function onFocus}
+          onBlur={function onBlur}
+          onKeyDown={function onKeyDown}
+          type="text"
+          data-slot="input"
+          placeholder="Seu nome"
+          className="h-8 w-full min-w-0 border py-1 text-base transition-colors outline-none file:inline-flex file:h-6..."
+-         style={{caret-color:"transparent"}}
+        >
+ @ http://localhost:4322/node_modules/.vite/deps/chunk-UTQ67KV7.js?v=6e94f51a:4072
