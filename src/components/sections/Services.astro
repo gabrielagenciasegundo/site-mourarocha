@@ -1,138 +1,98 @@
 ---
-import { ArrowRight } from "lucide-react";
-
-const services = [
+const areas = [
   {
-    title: "Sistema Financeiro, Pagamentos & Fintechs",
-    description: "Sustentamos plataformas que conectam todo o ecossistema financeiro, do Banco Central às adquirentes e instituições de pagamento. Integramos provedores, padronizamos fluxos e garantimos segurança, rastreabilidade e continuidade.",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=1200&auto=format&fit=crop",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+    title: "Propriedade Intelectual e Proteção de Criações",
+    description: "Registramos marcas, softwares, metodologias, campanhas, conteúdos e tudo que sustenta sua operação. Se é seu, precisa ser blindado.",
     featured: true,
   },
   {
-    title: "Indústria & Manufatura",
-    description: "Digitalizamos processos fabris, conectando esteiras de produção aos sistemas de gestão corporativa.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+    title: "Direito Empresarial Aplicado ao Digital",
+    description: "Imagem, voz, conteúdo, campanhas, entregáveis e direitos de uso. Ajudamos empresas a evitar conflitos e proteger sua reputação no ambiente digital.",
   },
   {
-    title: "Saúde & Medicina",
-    description: "Conectamos pacientes a provedores com conformidade estrita aos regulamentos de saúde.",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>`,
+    title: "Proteção de Dados, IA e Privacidade (LGPD)",
+    description: "Orientamos empresas que utilizam inteligência artificial ou dados sensíveis. Do consentimento ao uso correto de ferramentas de IA, garantimos segurança digital.",
   },
   {
-    title: "Contabilidade, Fiscal & Financeiro Operacional",
-    description: "Automação profunda e compliance absoluto para rotinas fiscais e contábeis de alto volume.",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>`,
+    title: "Direito Societário para Startups",
+    description: "Acordo de sócios, captable, entrada/saída de founders, expansão, seed, Série A, reorganização societária. Estruturas que acompanham a velocidade da sua empresa.",
   },
   {
-    title: "Governo, Utilities & Serviços Públicos",
-    description: "Construímos pontes seguras entre munícipes, cidadãos e as gigantescas infraestruturas de serviços básicos.",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=800&auto=format&fit=crop",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>`,
+    title: "Franchising",
+    description: "Suporte jurídico completo para redes de franquias da formatação à expansão. Contratos, compliance e proteção da marca em novos mercados.",
   },
   {
-    title: "Construção Civil & Engenharia",
-    description: "Plataformas de eficiência, rastreabilidade técnica e gestão de suprimentos para o canteiro de obras.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>`,
+    title: "Direito Trabalhista para Times Híbridos e Tech",
+    description: "Modelos mistos entre CLT, PJ, freelancers e creators são comuns no digital. Organizamos tudo para evitar riscos trabalhistas que possam travar seu crescimento.",
   },
-  {
-    title: "Comércio & Varejo",
-    description: "Sistemas complexos de PDV, gestão de estoque e orquestração multiplataforma integrando e-commerce.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Entretenimento & Experiências Digitais",
-    description: "Plataformas ultra escaláveis preparadas para suportar tráfego explosivo em emissões de tickets e streaming.",
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Social, Franquias & Plataformas Digitais",
-    description: "Redes engajadas, apps corporativos e ferramentas de gestão consolidadas que expandem marcas.",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop",
-  }
 ];
 ---
 
-<section id="setores" class="bg-[#f0f4f8] px-6 py-24 md:py-32">
+<section id="areas" class="bg-[#f0f4f8] px-6 py-24 md:py-32">
   <div class="mx-auto max-w-[1400px] space-y-14">
-    
-    <!-- Header: two-column layout exactly like globals.com -->
+
+    <!-- Header -->
     <div class="service-header grid gap-6 lg:grid-cols-2 lg:items-end">
-      <!-- Left: eyebrow + large title -->
       <div class="space-y-2">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">// SEGMENTOS</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">// NOSSA EXPERTISE</p>
         <h2 class="text-[clamp(2.5rem,5vw,4.5rem)] font-extralight text-slate-900 leading-[1.1] tracking-tight">
-          Projetamos e<br>
-          <strong class="font-bold">operamos software</strong>
+          Áreas de atuação
+          <strong class="font-bold block" style="color: #243588;">pensadas para o digital.</strong>
         </h2>
       </div>
-      <!-- Right: description paragraph -->
       <div class="lg:pb-3 lg:pl-8">
         <p class="text-base text-slate-500 leading-relaxed max-w-md">
-          Atuamos nos segmentos mais exigentes, oferecendo software e serviços de sistema 
-          para aplicações de segurança, missão e negócios críticos.
+          Protegemos o que você cria, constrói e escala. Soluções jurídicas modernas e especializadas para o mercado de tecnologia e inovação.
         </p>
       </div>
     </div>
 
-    <!-- Cards Grid: 4-column, matching globals.com -->
-    <div class="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-300/50">
-      {services.map((service, i) => (
+    <!-- Cards Grid -->
+    <div class="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200/80">
+      {areas.map((area, i) => (
         <a
-          href="#"
+          href="#contato"
           class:list={[
-            "service-card group relative overflow-hidden bg-slate-900 cursor-pointer block",
-            "aspect-4/5",
-            service.featured ? "sm:col-span-2 sm:row-span-2" : "",
+            "service-card group relative overflow-hidden bg-white cursor-pointer block p-8 md:p-10 space-y-5",
+            "hover:bg-[#243588] transition-colors duration-500",
+            area.featured ? "sm:col-span-2 lg:col-span-1" : "",
           ]}
           data-index={i}
         >
-          <!-- Background Image -->
-          <div
-            class="absolute inset-0 bg-cover bg-center transition-transform duration-1200 ease-in-out group-hover:scale-110"
-            style={`background-image: url('${service.image}');`}
-          />
-
-          <!-- Grayscale overlay that becomes more transparent on hover -->
-          <div class="absolute inset-0 bg-slate-800/60 grayscale transition-all duration-700 group-hover:bg-slate-800/40 group-hover:grayscale-0" />
-          
-          <!-- Deep gradient at bottom for text readability -->
-          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(2,6,23,0.92), rgba(15,23,42,0.3), transparent);" />
-          
-          <!-- Top-right arrow -->
-          <div class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-white/50 transition-all duration-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 17L17 7M7 7h10v10"/>
-            </svg>
+          <!-- Icon -->
+          <div class="icon-wrap flex items-center justify-center w-14 h-14 rounded-xl transition-colors duration-500 group-hover:bg-white/10" style="background-color: rgba(36,53,136,0.08);">
+            <div class="text-[#243588] group-hover:text-white transition-colors duration-500" set:html={area.icon} />
           </div>
 
-          <!-- Content at bottom -->
-          <div class="absolute bottom-0 left-0 right-0 p-6 md:p-7">
-            <h3 class:list={[
-              "font-bold text-white leading-tight transition-transform duration-500 group-hover:-translate-y-1",
-              service.featured ? "text-xl md:text-2xl" : "text-base md:text-lg",
-            ]}>
-              {service.title}
-            </h3>
+          <!-- Title -->
+          <h3 class="text-lg font-bold text-slate-900 group-hover:text-white leading-tight transition-colors duration-500">
+            {area.title}
+          </h3>
 
-            {/* Description: hidden by default, smoothly revealed on hover */}
-            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
-              <div class="overflow-hidden">
-                <p class:list={[
-                  "text-slate-300 leading-relaxed opacity-0 transition-opacity duration-500 delay-75 group-hover:opacity-100 mt-3",
-                  service.featured ? "text-sm md:text-base" : "text-xs md:text-sm",
-                ]}>
-                  {service.description}
-                </p>
-              </div>
-            </div>
+          <!-- Description -->
+          <p class="text-sm text-slate-500 group-hover:text-white/80 leading-relaxed transition-colors duration-500">
+            {area.description}
+          </p>
+
+          <!-- Arrow -->
+          <div class="flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-3" style="color:#243588;">
+            <span class="group-hover:text-white transition-colors duration-500">Saiba mais</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:text-white transition-colors duration-500"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
         </a>
       ))}
     </div>
+
   </div>
 </section>
 
 <script>
-  // Intersection Observer for scroll-triggered entrance animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -148,7 +108,6 @@ const services = [
 </script>
 
 <style>
-  /* Entrance animations on scroll */
   .service-header {
     opacity: 0;
     transform: translateY(30px);
@@ -162,21 +121,17 @@ const services = [
   .service-card {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.5s ease;
   }
   .service-card.in-view {
     opacity: 1;
     transform: translateY(0);
   }
 
-  /* Stagger the card animations using CSS */
   .service-card:nth-child(1) { transition-delay: 0ms; }
   .service-card:nth-child(2) { transition-delay: 60ms; }
   .service-card:nth-child(3) { transition-delay: 120ms; }
   .service-card:nth-child(4) { transition-delay: 180ms; }
   .service-card:nth-child(5) { transition-delay: 240ms; }
   .service-card:nth-child(6) { transition-delay: 300ms; }
-  .service-card:nth-child(7) { transition-delay: 360ms; }
-  .service-card:nth-child(8) { transition-delay: 420ms; }
-  .service-card:nth-child(9) { transition-delay: 480ms; }
 </style>

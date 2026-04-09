@@ -1,110 +1,165 @@
 ---
-import { ArrowRight } from "lucide-react";
+import robo2 from "@/assets/images/robo2.png";
+import robo3 from "@/assets/images/robo3.png";
 
-const platforms = [
+const clientTypes = [
   {
-    title: "Totals One",
-    subtitle: "Núcleo de Borda BaaS",
-    description: "Plataforma de missão crítica para estruturas BaaS. Conecta liquidantes, cores bancários, instituidoras, iniciadores de pagamento e provedores. App, Internet Banking, Backoffice, APIs completas e telemetria em tempo real.",
-    className: "lg:col-span-1 lg:row-span-2 min-h-[500px]",
-    image: "/images/placeholders/server-rack.jpg"
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+    label: "Startups",
   },
   {
-    title: "Totals Early",
-    subtitle: "Governança de Recebíveis",
-    description: "Visão consolidada e antecipação transparente com modelagem preditiva e prevenção rigorosa de fraudes operacionais.",
-    className: "lg:col-span-1 lg:row-span-2 min-h-[500px]",
-    image: "/images/placeholders/cube.jpg"
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+    label: "Agências de Marketing",
   },
   {
-    title: "Totals Cognit",
-    subtitle: "IA Conversacional Operacional",
-    description: "Automação com inteligência artificial para atendimento em esteiras de operação complexa e missão crítica.",
-    className: "lg:col-span-1 lg:row-span-1 min-h-[300px]",
-    image: "/images/placeholders/neural.jpg"
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>`,
+    label: "Empresas de Tecnologia",
   },
   {
-    title: "Totals Lince",
-    subtitle: "Antecipação Performada",
-    description: "Maior fluxo de caixa corporativo projetado para reduzir a volatilidade dos fundos gerenciados.",
-    className: "lg:col-span-1 lg:row-span-1 min-h-[300px]",
-    image: "/images/placeholders/lens.jpg"
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>`,
+    label: "SaaS e Plataformas Digitais",
   },
   {
-    title: "Monitoramento 24x7",
-    subtitle: "Operação Contínua 24x7",
-    description: "Supervisão ininterrupta. Redundância e fail-overs automatizados para sua plataforma não ter downtime.",
-    className: "lg:col-span-2 lg:row-span-1 min-h-[300px]",
-    image: "/images/placeholders/globe.jpg"
-  }
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+    label: "Influenciadores e Creators",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+    label: "Negócios que Usam IA",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
+    label: "Economia Criativa",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>`,
+    label: "E-commerce e Marketplaces",
+  },
 ];
 ---
 
-<section id="plataformas" class="bg-slate-50 px-6 py-24 md:py-32">
+<section id="empresas" class="bg-slate-50 px-6 py-24 md:py-32 overflow-hidden">
   <div class="mx-auto max-w-[1400px] space-y-16">
-    
-    <!-- 2-Column Header -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+
+    <!-- Header: two-column -->
+    <div class="clients-header grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
       <div class="col-span-1 lg:col-span-7 space-y-4">
         <p class="text-sm font-semibold tracking-[0.2em] text-slate-400 uppercase">
-          // NOSSAS PLATAFORMAS
+          // EMPRESAS QUE ATENDEMOS
         </p>
-        <h2 class="text-3xl md:text-6xl lg:text-[72px] font-bold tracking-tighter leading-[1.05] text-slate-900">
-          Tecnologia que
-          <br class="hidden md:block"/>
-          <span class="text-slate-400">governa operações.</span>
+        <h2 class="text-3xl md:text-5xl lg:text-[64px] font-bold tracking-tighter leading-[1.05] text-slate-900">
+          Especialistas no jurídico
+          <span class="block text-slate-400">das novas economias.</span>
         </h2>
       </div>
       <div class="col-span-1 lg:col-span-5 lg:pt-12">
-        <p class="text-lg md:text-md text-slate-600 leading-relaxed font-light max-w-lg">
-          Plataformas especializadas para operações de missão crítica. 
-          Cada produto nasce da nossa experiência em ambientes regulados e de alta exigência.
+        <p class="text-lg text-slate-600 leading-relaxed font-light max-w-lg">
+          Atuamos com empresas que vivem na velocidade do digital. Entendemos o que você faz e sabemos exatamente como proteger.
         </p>
       </div>
     </div>
 
-    <!-- Bento Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
-      {platforms.map((platform, index) => (
-        <a 
-          href="#contato" 
-          class={`service-card block relative overflow-hidden bg-[#0f172a] group ${platform.className}`}
-        >
-          <!-- Background Placeholder (Darkened state) -->
-          <div class="absolute inset-0 bg-[#0f172a]/90 transition-all duration-700 ease-in-out group-hover:bg-[#0f172a]/70 z-10"></div>
-          
-          <!-- Image (scales on hover) -->
-          <div class="absolute inset-0 bg-slate-800 transition-transform duration-[1.2s] ease-out group-hover:scale-105 z-0">
-             <!-- Abstract grid background as fallback since we don't have images -->
-             <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at center, white 1px, transparent 1px); background-size: 20px 20px;"></div>
-          </div>
+    <!-- Main content: client types + robot image -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          <!-- Arrow Icon (Top Right) -->
-          <div class="absolute top-6 right-6 z-20 text-white/50 transition-all duration-500 transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
-            <ArrowRight class="w-5 h-5 -rotate-45" />
-          </div>
-
-          <!-- Content (Bottom anchord) -->
-          <div class="absolute bottom-0 left-0 right-0 p-8 z-20 flex flex-col justify-end">
-            <h3 class="text-2xl font-bold text-white tracking-tight mb-1">{platform.title}</h3>
-            <p class="text-white/80 font-medium text-sm transition-transform duration-500 transform translate-y-0 relative z-30">{platform.subtitle}</p>
-            
-            <!-- Hidden Description Revealed on Hover -->
-            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
-              <div class="overflow-hidden">
-                <p class="text-white/70 text-sm mt-4 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                  {platform.description}
-                </p>
-              </div>
+      <!-- Client type chips/cards -->
+      <div class="clients-grid grid grid-cols-2 gap-4">
+        {clientTypes.map((client, i) => (
+          <div
+            class="client-chip group flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-5 hover:border-[#243588] hover:shadow-md transition-all duration-300 cursor-default"
+            data-index={i}
+          >
+            <div class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-300 group-hover:bg-[#243588]" style="background-color: rgba(36,53,136,0.06);">
+              <div class="text-[#243588] group-hover:text-white transition-colors duration-300" set:html={client.icon} />
             </div>
+            <span class="text-sm font-semibold text-slate-700 group-hover:text-slate-900 leading-tight transition-colors duration-300">
+              {client.label}
+            </span>
           </div>
-        </a>
-      ))}
+        ))}
+      </div>
+
+      <!-- Right: robot illustration + call-out box -->
+      <div class="clients-visual relative flex flex-col items-center gap-8">
+        <div class="relative">
+          <!-- Decorative background circle -->
+          <div class="absolute inset-0 rounded-full scale-75" style="background: radial-gradient(circle, rgba(36,53,136,0.08) 0%, transparent 70%);"></div>
+          <img
+            src={robo3.src}
+            alt="Especialistas no digital"
+            class="relative z-10 w-full max-h-[380px] object-contain drop-shadow-xl"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Highlight box -->
+        <div class="w-full max-w-md bg-white border border-slate-200 rounded-2xl p-6 shadow-lg">
+          <p class="text-slate-900 font-semibold text-lg leading-snug mb-3">
+            "Entendemos o que você faz e sabemos exatamente como proteger."
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+            <span class="h-2 w-2 rounded-full" style="background-color: #243588;"></span>
+            <span class="text-xs font-medium text-slate-500 uppercase tracking-wide">Moura Rocha Advocacia</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
 </section>
 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.clients-header, .client-chip, .clients-visual').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
 <style>
-  /* Optional: Smooth fade in for scroll if needed, reusing the intersection observer approach from global.css or Hero */
+  .clients-header {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .clients-header.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .client-chip {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .client-chip.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .client-chip:nth-child(1) { transition-delay: 0ms; }
+  .client-chip:nth-child(2) { transition-delay: 50ms; }
+  .client-chip:nth-child(3) { transition-delay: 100ms; }
+  .client-chip:nth-child(4) { transition-delay: 150ms; }
+  .client-chip:nth-child(5) { transition-delay: 200ms; }
+  .client-chip:nth-child(6) { transition-delay: 250ms; }
+  .client-chip:nth-child(7) { transition-delay: 300ms; }
+  .client-chip:nth-child(8) { transition-delay: 350ms; }
+
+  .clients-visual {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+  }
+  .clients-visual.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
 </style>
